@@ -14,6 +14,7 @@
     align-items: center;
     background-color: rgb(43, 43, 46);
     position: relative;
+    color:#ffffff;
     
   }
   section::before {
@@ -51,10 +52,34 @@
  .container .card{
     height:100%;
     width:100%;
-    background-color:#4b464668;
+    background-color:rgba(255, 255, 255, 0.1);
     border-radius: 25px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    border:1px solid rgba(255,255,255,0.1);
+    
  }
 
+ .logo{
+  display: flex;
+  align-items: center;
+ }
+
+ .chip img{
+  border-radius:3px
+ }
+
+ .card .header{
+  display: flex;
+ }
+
+
+ 
+
+ 
+ 
+
+ 
   
 
 
