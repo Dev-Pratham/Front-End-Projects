@@ -113,7 +113,7 @@ switch(number){
 }
 */
 
-// //calculator using switch
+//calculator using switch
 
 // System.out.print("Enter value of a:");
 // int a=sc.nextInt();
@@ -174,7 +174,7 @@ switch(number){
 // break;
 
 // default:System.out.println("enter 1-7 only");
-//false 63
+
 // }
 
 
@@ -217,7 +217,7 @@ switch(number){
 // System.out.println(sum);
 
 // int line=0;
-//printing pattern problem
+// // printing pattern problem
 // while(line<4){
 //     System.out.println("****");
 //     line++;
@@ -408,13 +408,13 @@ switch(number){
 
 
 
-// for(int i=1;i<=4;i++){
+for(int i=1;i<=4;i++){
 
-//      for(int j=1;j<=i;j++){
-//         System.out.print(j);
-//      }
-//      System.out.println();
-// }
+     for(int j=1;j<=i;j++){
+        System.out.print(j);
+     }
+     System.out.println();
+}
 
 // char letter='A';
 // for(int i=1;i<=6;i++){

@@ -158,9 +158,133 @@ public class JavaBasics2 {
         System.out.println(dec);
 
     }
+
+    public static int avg(int a ,int b, int c){
+
+        return (a+b+c)/3;
+    }
+
+    public static boolean isEven(int n){
+
+        if(n%2==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static int reverse(int n){
+
+       int rev=0;
+       while(n>0){
+         int lastdigit=n%10;
+         rev=(rev*10)+lastdigit;
+         n/=10;
+       }
+              
+          return rev;
+    }
+    public static boolean isPalindrome(int n){
+
+      
+        if(n==reverse(n)){
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public static int  sumOfDigits(int n){
+
+
+        int sum=0;
+
+        while(n>0){
+            int lastdigit=n%10;
+            sum+=lastdigit;
+            n/=10;
+        }
+
+        return sum;
+
+    }
+
+    public static void hollowRectangle(int n){
+
+
+         for(int i=1;i<=n;i++){
+
+             for(int j=1;j<=n;j++){
+                   
+                 if(j==1 || j==n || i==1 || i==n){
+                    System.out.print("* ");
+                 }
+                 else{
+                    System.out.print("  ");
+                 }
+             }
+             System.out.println();
+         }
+
+
+    }
+
+    public static void invertedTriangle(int n){
+
+
+        for(int i=1;i<=n;i++){
+
+             for(int j=1;j<=n;j++){
+
+                 if((i+j)>n){
+                    System.out.print("* ");
+                 }
+                 else{
+                    System.out.print("  ");
+                 }
+             }
+
+             System.out.println();
+        }
+    }
+
+    public static void invertedHalfPyramid(int n){
+
+
+        for(int i=1;i<=n;i++){
+             
+            for(int j=1;j<=n-i+1;j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void floydsTriangle(int n){
+
+
+         int itr=1;
+
+         for(int i=1;i<=n;i++){
+
+             for(int j=1;j<=i;j++){
+
+                 System.out.print(itr+" ");
+                 itr++;
+                 
+             }
+             System.out.println();
+         }
+
+    }
     public static void main(String args[]){
 
+
+        Scanner sc=new Scanner(System.in);
         // printHello(); //function call
+
 
         //to calculate sum of 2 numebers using function
         //  Scanner sc=new Scanner(System.in);
@@ -202,12 +326,48 @@ public class JavaBasics2 {
         // b2d(n);
 
         //decimal to binary
-        int n=2;
-        d2b(n);
+        // int n=2;
+        // d2b(n);
 
+        //This is the sample question from the course
+        //to compute avegage of 3 numbers
+        // int a,b,c;
+        // a=10;
+        // b=20;
+        // c=30;
 
+        // int avg=avg(a, b, c);
+        // System.out.println("The average is :"+avg);
 
+        //func to check whether a number is odd or even
+        // int n=-10;
+        // System.out.println(isEven(n));
        
+
+        //func to check whether a number is palimdrome
+        //simply we reverse a number then compare the 2 numbers if 2 numbers are same
+        // then it is palimdrome or else it not as it`s simple
+
+        // System.out.print("Enter number to compare:");
+        // int n=sc.nextInt();
+        // sc.close();
+        // System.out.print(isPalindrome(n));
+
+
+        //write a method to compute the sum of digits is an integer
+
+        //pattern to print hollow rectamgle
+        // hollowRectangle(10);
+
+        // //pattern to print inverted and rotated half pyramid
+        // invertedTriangle(10);
+
+        //inverted half pyramid with numbers 
+        // invertedHalfPyramid(5);
+
+        //floyd`s triangle
+        floydsTriangle(5);
+
 
     }
 }
