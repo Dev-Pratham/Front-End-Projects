@@ -279,6 +279,78 @@ public class JavaBasics2 {
          }
 
     }
+
+    public static void triangle(int n){
+
+        for(int i=1;i<=n;i++){
+
+             for(int j=1;j<=i;j++){
+                 
+                if((i+j)%2==0){
+                    System.out.print(1+" ");
+                }
+                else{
+                    System.out.print(0+" ");
+                }
+             }
+             System.out.println();
+        }
+    }
+
+    public static void butterfly(int n){
+
+
+        if(n%2!=0){
+            n+=1;
+        }
+
+        int half=n/2;
+        //butterfly first half
+
+        for(int i=1;i<=half;i++){
+
+            for(int j=1;j<=i;j++){
+
+                 System.out.print("* ");
+                  
+            }
+
+            for(int k=1;k<=n-2*i;k++){
+
+                System.out.print("  ");
+            }
+
+            for(int l=1;l<=i;l++){
+
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+        //butterfly 2nd half
+        for(int i=1;i<=half;i++){
+
+            for(int j=1;j<=half-i+1;j++){
+
+                 System.out.print("* ");
+                  
+            }
+
+            for(int k=1;k<=2*i-2;k++){
+
+                System.out.print("  ");
+            }
+
+            for(int l=1;l<=half-i+1;l++){
+
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+    }
     public static void main(String args[]){
 
 
@@ -366,7 +438,14 @@ public class JavaBasics2 {
         // invertedHalfPyramid(5);
 
         //floyd`s triangle
-        floydsTriangle(5);
+        // floydsTriangle(5);
+
+        //0-1 triangle
+        // triangle(10);
+
+        //butterfly
+        butterfly(7);
+
 
 
     }
