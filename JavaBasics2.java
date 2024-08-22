@@ -351,6 +351,91 @@ public class JavaBasics2 {
         }
 
     }
+
+    public static void solidRhombus(int n){
+
+ 
+         for(int i=1;i<=n;i++){
+              
+             for(int j=1;j<=n-i;j++){
+
+                System.out.print("  ");
+             }
+
+             for(int k=1;k<=n;k++){
+                System.out.print("* ");
+             }
+
+             System.out.println();
+         }
+
+    }
+
+    public static void hollowSolidRhombus(int n){
+
+
+        for(int i=1;i<=n;i++){
+              
+            for(int j=1;j<=n-i;j++){
+
+               System.out.print("  ");
+            }
+
+            for(int k=1;k<=n;k++){
+
+                if((i==1 || i==n) || (k==1 || k==n)){
+                      System.out.print("* ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+
+            }
+
+            System.out.println();
+        }
+
+
+    }
+
+    public static void diamond(int n){
+
+        if(n%2!=0){
+            n+=1;
+        }
+
+        int half=n/2;
+
+        for(int i=1;i<=half;i++){
+
+            for(int j=1;j<=half-i;j++){
+                System.out.print("  ");
+            }
+
+            for(int k=1;k<=2*i-1;k++){
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+       //for other half of diamond
+        for(int i=1;i<=half;i++){
+            
+        
+            for(int j=1;j<=i-1;j++){
+
+                System.out.print("  ");
+            }
+
+
+            for(int k=1;k<=n+1-2*i;k++){
+                System.out.print("* ");
+            }
+
+            System.out.println();
+
+        }
+    }
     public static void main(String args[]){
 
 
@@ -444,9 +529,16 @@ public class JavaBasics2 {
         // triangle(10);
 
         //butterfly
-        butterfly(7);
+        // butterfly(7);
+
+       //solidrhombus
+    //    solidRhombus(5);
 
 
+    //hollow solid rhoumbus
+    // hollowSolidRhombus(25);
 
+    //diamond
+    diamond(11);
     }
 }
