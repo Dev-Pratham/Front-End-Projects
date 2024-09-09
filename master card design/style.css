@@ -1,9 +1,10 @@
 * {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family: "Roboto";
+    font-style:normal;
     margin:0;
     padding:0;
+    box-sizing: border-box;
+    font-weight: 400;
   }
 
   section {
@@ -14,16 +15,19 @@
     align-items: center;
     background-color: rgb(43, 43, 46);
     position: relative;
+    color:white;
+    perspective: 1000px;
+    
     
   }
   section::before {
 
     content:"";
-    width: 250px;
-    height: 250px;
+    width: 225px;
+    height: 225px;
     background-image: linear-gradient(90deg,#02549b,#ffffff);
     border-radius: 50%;
-    position: absolute;
+    position:absolute;
     transform: translate(-150px, -100px);
 
   }
@@ -31,8 +35,8 @@
   section::after {
 
     content:"";
-    width: 250px;
-    height: 250px;
+    width: 225px;
+    height: 225px;
     background-image: linear-gradient(90deg,#025499,#ffffff);
     border-radius: 50%;
     position: absolute;
@@ -45,15 +49,126 @@
     width: 375px;
     height: 275px;
     z-index:1;
+    transition: 0.6s ease-in-out;
+    transform-style:preserve-3d;
 
  }
 
  .container .card{
     height:100%;
     width:100%;
-    background-color:#4b464668;
+    background-color:rgba(95, 83, 83, 0.1);
     border-radius: 25px;
+    box-shadow: 0 25px 45px rgba(193, 211, 218, 0.4);
+    backdrop-filter:blur(50px);
+    padding:40px;
+    border:1px solid #b1acacc1
  }
+
+ .frontface .header .logos img,.header img{
+  width: 60px;
+  border-radius: 5px;
+ }
+
+ .header .logos{
+  font-size:18px;
+ }
+
+ .frontface .header,
+ .frontface .logos{
+  display:flex;
+  align-items: center;
+ }
+
+ .frontface .header{
+  justify-content: space-between;
+ }
+
+ .header .logos img{
+  margin-right: 10px;
+ }
+
+ .frontface .carddetails{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 60px;
+ }
+
+ h6{
+  font-size:12px;
+ }
+
+ .number {
+  letter-spacing:1px;
+  font-size: 18px;
+ }
+
+ h5.name{
+  margin-top: 14px;
+  font-size: 15px;
+ }
+
+.backface .magneticstripe{
+  position:absolute;
+  left:0;
+  width:100%;
+  height:40px;
+  background-color: black;
+  margin-top: 10px;
+ }
+
+ .backface .signature{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top:60px;
+  height: 40px;
+  width: 85%;
+  border-radius: 6px;
+  /* background-color:white;
+   */
+  background-image: repeating-linear-gradient(
+    #fff,
+    #fff 3px,
+    #eec263 0px,
+    #efefef 9px
+  );
+  margin-bottom: 9px;
+  
+ }
+
+.signature i{
+  color: black; 
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-right: -34px;
+  z-index:-1;
+ }
+
+ .backface h5{
+  font-size:11px;
+  margin-top: 15px;
+  text-align: justify;
+
+ }
+
+ .container .backface{
+  transform:rotateY(180deg);
+  
+ }
+
+ .container .card{
+  position:absolute;
+  backface-visibility: hidden;
+ }
+
+ .container:hover{
+  transform: rotateY(180deg);
+ }
+
+ 
 
   
 
