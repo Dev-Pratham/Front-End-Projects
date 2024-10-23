@@ -1,0 +1,120 @@
+body{
+    box-sizing: border-box;
+    height:100vh;
+    margin: 0;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:aliceblue;
+    background: rgba(0, 0, 0, 0.872);
+ 
+}
+
+.card{
+    width:90%;
+    max-width: 450px;
+    background: rgba(192, 191, 212, 0.4);
+    background: linear-gradient(135deg, rgba(8, 115, 161, 0.002) 24%,
+     rgba(9, 113, 161, 0.99) 72%);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 40px;
+     border-radius: 20px;
+     border: 1px solid rgba(245, 245, 245, 0.329);
+     box-shadow: 5px 10px 25px rgb(207, 201, 196);
+     /* backdrop-filter: blur(100px); */
+     
+}
+
+.card .search {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card .iconNinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.iconNinfo h3{
+    font-weight:lighter;
+}
+
+.data1,.data2,.data{
+ display: flex;
+ 
+    
+}
+.data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    margin:0;
+    
+    font-weight:lighter;
+    
+}
+
+.data h3{
+    font-size: 29px;
+    padding-left: 25px;
+}
+
+.names{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:28px;
+    margin-top: -50px;
+    font-weight: lighter;
+    
+
+}
+
+.iconNinfo{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    
+}
+
+.iconNinfo h2{
+    font-size: 80px;
+}
+
+.iconNinfo h3{
+    font-size: 60px;
+    margin-top: -50px;
+}
+
+#city{
+    width:60%;
+    height:50px;
+    border-radius: 25px;
+    color:black;
+    padding: 10px;
+    font-size: large;
+    
+
+}
+.search img{
+    margin-left: 20px;
+    background-color:rgba(255, 255, 255, 0.217);
+    width:50px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.error{
+    margin-left: 24px;
+}
+
+.data1 h3,.data2 h3{
+    font-size:30px;
+}
