@@ -29,39 +29,39 @@ async function checkWeather(city) {
      document.querySelector(".data2 h3").innerHTML=data.wind.speed+"m/s";
 
             if(data.weather[0].main=="Mist"){
-                weatherImage.src="mist.png";
+                weatherImage.src="images/mist.png";
            }
 
             else if(data.weather[0].main=="cloud"){
-                weatherImage.src="cloud.png";
+                weatherImage.src="images/cloud.png";
             }
 
             else if(data.weather[0].main=="cloudy snowing"){
-                weatherImage.src="cloudy snowing.png";
+                weatherImage.src="images/cloudy snowing.png";
             }
 
             else if(data.weather[0].main=="cyclone"){
-                weatherImage.src="cyclone.png";
+                weatherImage.src="images/cyclone.png";
            
             }
 
             else if(data.weather[0].main=="emergency heat"){
-                weatherImage.src="emergency heat.png";
+                weatherImage.src="images/emergency heat.png";
 
             }
 
             else if(data.weather[0].main=="flood"){
-                weatherImage.src="flood.png";
+                weatherImage.src="images/flood.png";
 
             }
 
             else if(data.weather[0].main=="landslide"){
-                weatherImage.src="landslide.png";
+                weatherImage.src="images/landslide.png";
 
             }
 
             else if(data.weather[0].main=="rainy"){
-                weatherImage.src="rainy.png";
+                weatherImage.src="images/rainy.png";
 
             }
 
