@@ -7,16 +7,13 @@ body{
     align-items: center;
     justify-content: center;
     color:aliceblue;
-    background: rgba(0, 0, 0, 0.872);
+    background: rgba(2, 0, 6, 0.872);
  
 }
 
 .card{
-    width:90%;
-    max-width: 450px;
-    background: rgba(192, 191, 212, 0.4);
-    background: linear-gradient(135deg, rgba(8, 115, 161, 0.002) 24%,
-     rgba(9, 113, 161, 0.99) 72%);
+     width:90%;
+     max-width: 450px;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -24,7 +21,9 @@ body{
      border-radius: 20px;
      border: 1px solid rgba(245, 245, 245, 0.329);
      box-shadow: 5px 10px 25px rgb(207, 201, 196);
-     /* backdrop-filter: blur(100px); */
+     background-color: rgba(7, 29, 65, 0.329);
+     
+     
      
 }
 
@@ -104,11 +103,13 @@ body{
 
 }
 .search img{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     background-color:rgba(255, 255, 255, 0.217);
     width:50px;
     border-radius: 30px;
     padding: 10px;
+    /* display: block; */
+    
 }
 
 .error{
@@ -117,4 +118,18 @@ body{
 
 .data1 h3,.data2 h3{
     font-size:30px;
+}
+
+button{
+    padding: 0;
+    margin:0;
+    background-color:transparent;  
+    border-radius:30px;
+    margin-left: 20px;
+    border:none;
+
+}
+
+button:hover{
+    background-color: rgb(8, 142, 142);
 }
