@@ -24,6 +24,7 @@ max-width:380px;
 border-radius:12px;
 padding:12px;
 box-shadow: 12px 12px 23px black;
+user-select: none;
 
 }
 
@@ -64,6 +65,7 @@ ul li{
     /* to make the circle align with the text */
     display: flex;
     align-items: center;
+    /* border: 1px solid black; */
     
     
 
@@ -72,29 +74,54 @@ ul li{
 /* to make it block level position is set to absolute */
 
 ul li::before{
-    content:' ';
+    content:'';
     position:absolute;
-    height: 15px;
-    width:15px;
+    height: 20px;
+    width:20px;
     border-radius: 50%;
-    background-color:whitesmoke;
-    margin-left:-29px;
-    outline:3px solid rgba(0, 0, 0, 0.539);
+    background-image:url(unchecked.png);
+    background-size: cover;
+    margin-left: -29px;
+   
     
 }
 
 li.checked::before{
-    content:' ';
-    position: absolute;
-    width:15px;
-    height: 15px;
-    outline:3px solid rgba(0, 0, 0, 0.539);
-    background-color: rgb(10, 241, 125);
-    text-decoration: line-through;
+    
+    content:'';
+    position:absolute;
+    height: 20px;
+    width:20px;
+    border-radius: 50%;
+    background-image:url(checked\ \(2\).png);
+    background-size: cover;
+    margin-left: -29px;
 
 
 }
 
 li.checked{
     text-decoration: line-through;
+    color:rgba(240, 248, 255, 0.527);
 }
+
+ul li span{
+   position: absolute;
+   right: 0px; 
+   font-size:20px;
+   width:24px;
+   height:24px;
+   display:flex;
+   align-items: center;
+   background-color: rgba(165, 193, 193, 0.877);
+   justify-content: center;
+   border-radius: 50%;
+   color: black;
+    
+}
+
+ul li span:hover{
+    background-color: rgba(0, 0, 0, 0.475);
+    color:white;
+}
+
