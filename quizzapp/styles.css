@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    overflow-y: hidden;
+    background:rgba(0,0,0,0.9);
+    color:white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height:75%;
+    box-sizing: border-box;
+}
+
+.card input{
+    width:450px;
+    max-width:450px;
+    height:30px;
+    padding-left:25px;
+    border: none;
+    
+
+}
+
+.card button{
+    padding:8px;
+    font-size:10px;
+    border:none;
+    background-color: rgb(78, 128, 4);
+    color:white;
+
+
+}
