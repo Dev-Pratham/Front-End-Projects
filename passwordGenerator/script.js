@@ -7,15 +7,21 @@ const toolTip=document.querySelector(".card .tooltip");
 outputField.addEventListener('click',myfunction);
 
 function myfunction(){
+    if(outputField.value!=''){
     outputField.classList.toggle('checked');
     toolTip.classList.toggle('show');
 
     navigator.clipboard.writeText(outputField.value)
-    
+    }
     setTimeout(()=>{
+
+        if(outputField.value!=''){
         outputField.classList.toggle('checked');
         toolTip.classList.toggle('show');
+
+        }
     },600);
+
 }
 
 const upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -25,7 +31,7 @@ const specialChar="!@#$%^&*()_+[]{}|;:,.<>?/~`";
 
 const comb=upperCase+lowerCase+numbers+specialChar;
 
-let passwordLenght=12;
+let passwordLenght=19;
 
 generateButton.addEventListener('click',()=>{
 
