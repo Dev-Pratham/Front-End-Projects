@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    overflow-y: hidden;
+    background:rgba(0,0,0,0.9);
+    color:white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height:75%;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.card input{
+    width:450px;
+    max-width:450px;
+    height:30px;
+    padding-left:25px;
+    border: none;
+    /* pointer-events:none; */
+     /* this was causing issue with hover state */
+    background-image: url(svgs/copySvg.svg);
+    background-repeat: no-repeat;
+    background-position-x:98%;
+    background-position-y:center;
+    background-size:20px;
+    transition: 0.3s;
+    
+}
+
+input.checked{
+    background-image: url(svgs/copyState.svg);
+}
+
+.card button{
+    padding:8px;
+    font-size:10px;
+    border:none;
+    background-color: rgb(78, 128, 4);
+    color:white;
+    background-image: url(svgs/generate.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
+    background-position-y:center;
+    background-position-x:5px;
+    padding-left: 24px;
+    
+
+}
+
+button:active{
+    box-shadow: 5px 12px 45px rgb(89, 139, 16);
+    outline:1px solid white;
+}
+
+.card{
+    position: relative;
+}
+
+.card .tooltip{
+    font-size: 10px;
+    position: absolute;
+    right:0px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.315);
+    padding: 8px 12px;
+    color: white;
+    letter-spacing: normal;
+    opacity: 0;
+    transition:opacity 0.3s ease-in-out;
+
+}
+
+.tooltip.show{
+    opacity: 1;
+    outline: 1px solid white;
+}
