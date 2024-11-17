@@ -1,1 +1,1 @@
-In this git repository I upload all the dsa questions which I solve in my local machine 
+In this git repository I upload all the frontend projects
